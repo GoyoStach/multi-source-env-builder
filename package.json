@@ -1,0 +1,28 @@
+{
+  "name": "vite-test",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "env-cmd -f ./config/env/.env.dev env-cmd -f ./config/maison/.env.maison.iwc vite",
+    "build": "vite build",
+    "preview": "import-meta-env --example .env.example -o \"build/**/*\" && vite preview",
+    "start:dev:iwc": "env-cmd -f ./config/env/.env.dev env-cmd -f ./config/maison/.env.maison.iwc npm run preview",
+    "start:prod:iwc": "env-cmd -f ./config/env/.env.prod env-cmd -f ./config/maison/.env.maison.iwc npm run preview",
+    "start:dev:cartier": "env-cmd -f ./config/env/.env.dev env-cmd -f ./config/maison/.env.maison.cartier npm run preview",
+    "start:prod:cartier": "env-cmd -f ./config/env/.env.prod env-cmd -f ./config/maison/.env.maison.cartier npm run preview"
+  },
+  "dependencies": {
+    "@import-meta-env/cli": "^0.1.7",
+    "env-cmd": "^10.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@import-meta-env/unplugin": "^0.1.8",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@vitejs/plugin-react": "^1.0.7",
+    "cross-env": "^7.0.3",
+    "vite": "^2.9.0"
+  }
+}
